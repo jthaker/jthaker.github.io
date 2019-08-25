@@ -55,6 +55,7 @@ html {
   left: 0
 }
 
+
 .intro .intro-body .brand-heading {
   font-size: 60px;
   color: white;
@@ -279,3 +280,10 @@ p {
   line-height: 1.5;
   text-align: left
 }
+
+
+#contact {
+  text-align: center; 
+}
+
+    
