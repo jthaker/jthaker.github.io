@@ -1,40 +1,165 @@
 <!DOCTYPE html>
-<!-- CSS Stylesheets with Relative Paths -->
+
 <html lang="en-us">
 <head>
   <meta charset="UTF-8">
   <title>Jake Thaker</title>
 
-  <!-- This line is money! It points your HTML to the CSS file. -->
-  <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Bootstrap CSS & JS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- d3 JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+
+  <!-- Our CSS-->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/d3style.css">
+
 </head>
 
 <body>
 
-  <header>
-    <h1>Jake Thaker</h1>
-  </header>
 
-  <main class="container">
-    <section id="main-bio">
-      <section id="figure">
-        <h2 id="bio-name">Your Name</h2>
-        <img id="bio-image" src="assets/images/professional.jpg" width="500" height="437" alt="Your Name">
-      </section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum risus ut justo laoreet consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc dui neque, malesuada egestas aliquet ac, commodo in magna. Etiam mollis odio at mi maximus hendrerit. Integer aliquam id lectus nec hendrerit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris rhoncus eget nulla in ornare. Maecenas massa nibh, commodo non condimentum eu, congue tempus neque. Donec neque mi, ullamcorper eget fringilla et, iaculis vitae tortor. Curabitur vel nunc vel mi lobortis ornare ut non nulla. Etiam ornare libero ac suscipit aliquam. Nunc venenatis felis sit amet velit vehicula interdum. Vivamus iaculis condimentum nulla vitae dapibus.</p>
-    </section>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="navbar-brand page-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand page-scroll" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand page-scroll" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand page-scroll" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>  
+    </nav>
+    <div class="panel0-container">
+        <div class="panel0">
+            <img src="assets/images/professional.jpg">
+        </div>
+    </div>
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                  <div class="head-contain">
+                  <h1 class="brand-heading">Jake Thaker</h1>
+                  <p class="intro-text">Data Analyst</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main">
+        <div class="container">
 
-    <aside id="contact-info">
-      <h2>Contact Info</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="#">jakethaker@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="#">https://www.linkedin.com/in/jakethaker/</a></li>
-        <li><strong>Phone:</strong> <a href="#">(309) 825-2847</a></li>
-      </ul>
-    </aside>
-  </main>
+          <div id="about" class="row">
+            <h1 class="teaser-head">About</h1>            
+          </div>
+              
+          <hr class="col-xs-12">
 
-</body>
+          <div class="row">
+              <p class="paragraph">Data Analyst with extensive experience in client relationships, sales, public speaking and customer service with an educational background in Physics and Engineering. Have completed a certification through the University of Minnesota Data Analytics Boot Camp honing skills in Python, SQL, Javascript, R, Tableau, and Excel VBA, among other technologies. I am an insatiable learner and passionate about cleaning and spotting valuable trends in data with a strong ability to communicate these findings to a non-technical audience. Highly competent in leading and adapting to change, while solving complex problems with a team or independently. With my background in sales and service merged with my education, I can bring the full package to a data analytics professional environment.</p>
+          </div>
+
+            <div id="resume" class="row">
+              <h1 class="teaser-head">Resume</h1>            
+            </div>
+            <hr class="col-xs-12">
+
+            <div  class="row">
+              <div class="col-xs-10 col-xs-offset-1">
+                <div class="responsive-object">
+                  <iframe src="resume.pdf" width="300%" height="500px" style="border: none;">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <div id="projects" class="row">
+              <h1 class="teaser-head">Projects</h1>
+            </div>
+            <hr class="col-xs-12">
+            
+            <div class="row">
+              <h3 class="paragraph"><strong>Grapes of Math: Machine Learning with Wine</strong><br>
+            </div>
+            
+            <br>
+
+            <div class="row">
+                <p class="paragraph"><strong>Chief Machine Learning Engineer. </strong>Utilized K-means clustering through scikit-learn to classify dataset on wine retrieved from www.ics.uci.edu. Variables chosen based on correlation matrix created by team member. Created linear regression model fitted to centroids of data clusters to more accurately determine and project relationship between chosen variables. Displayed fit curves and data using Seaborn and Matplotlib.</p>
+              </div>
+
+            <div class="row">
+              <p class="paragraph"><strong>Project goal: </strong>To spot trends in wine data set. Group members used Tableau to display sales volume per country, popular varieties of wine, and indicate distribution of pricing per bottle. Additionally, machine learning through Python was used to extract clusters and find anomalies and outliers within data. Scikit-learn located centroids for clusters, which were then used to fit a linear regression to model a rough relationship between chemical qualities in wine.</p>
+            </div>
+
+            <div class = "row">
+                <a href="https://github.com/matthewellishanson/grapes-of-math.git">Project Link</a>
+            </div>
+            <br>
+            <hr>
+
+
+            <div class="row">
+                <h3 class="paragraph"><strong>Trends in Student Tuition and Enrollment</strong>
+            </div>
+            <br>
+
+            <div class ="row">
+              <p class="paragraph"><strong>Python Developer. </strong>Initiated and assisted with data wrangling process using pandas. Created visuals for data using matplotlib. For statistical analysis, used numpy and scipy to fit data, analyze results and make predictions based on theoretical projections from regression models.</p>
+            </div>
+
+            <div class="row">
+              <p class="paragraph"><strong>Project goal: </strong>To observe trends in student tuition, enrollment and aid available for students. To achieve this, we have looked at data for the following fields starting from 1973 all the way up to 2017: Tuition, Median Income, Student Aid, Wage Gap, Awarded Grants, Consumer Price Index, Student Aid Loans, and Enrollment Statistics. </p>
+            </div>
+
+            <div class="row">
+                <a href="https://github.com/jthaker/tuition_analysis">Project Link</a>
+            </div>
+            <br>
+            <hr>
+
+            <div id="contact" class="row">
+              <h1 class="teaser-head">Contact</h1>
+            </div>
+            <hr class="col-xs-12">
+
+            <div id="contact" class="row">
+            <p class="paragraph"><strong>Email:</strong> <a href="#"></a>jakethaker@gmail.com</a></p>
+            <p class="paragraph"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jakethaker">Profile</a></p>
+            <p class="paragraph"><strong>Phone:</strong> (309) 825-2847</p>
+          </div>
+        
+
+        </div>
+  
+    </main>
+
+  </body>
 
 </html>
+
+
+
+
+
+
+  
